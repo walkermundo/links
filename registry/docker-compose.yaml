@@ -1,0 +1,24 @@
+version: '3.6'
+volumes:
+  registry-data:
+services:
+  registry:
+    image: registry:2
+    environment:
+      REGISTRY_HTTP_ADDR: 0.0.0.0:443
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/dakcs_wildcard_cert.pem
+      REGISTRY_HTTP_TLS_KEY: /certs/dakcs_wildcard_key.pem
+    ports:
+      - 443:443
+    volumes:
+      - type: 'bind'
+        source: /root/certs
+        target: /certs
+        volume:
+          nocopy: true
+      - type: 'volume'
+        source: registry-data
+        target: /var/lib/registry
+        volume:
+          nocopy: true
+    restart: always
