@@ -1,0 +1,17 @@
+version: '3.6'
+volumes:
+  dbserver-mysql-data:
+services:
+  dbserver-db:
+    image: mysql:5.7
+    env_file:
+      mysql.env
+    ports:
+      - 3307:3306
+    volumes:
+      - type: 'volume'
+        source: dbserver-mysql-data
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+    restart: always

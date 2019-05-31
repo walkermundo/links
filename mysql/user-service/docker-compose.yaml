@@ -1,0 +1,17 @@
+version: '3.6'
+volumes:
+  user-service-mysql-data:
+services:
+  user-service-db:
+    image: mysql:5.7
+    env_file:
+      mysql.env
+    ports:
+      - 3306:3306
+    volumes:
+      - type: 'volume'
+        source: user-service-mysql-data
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+    restart: always
