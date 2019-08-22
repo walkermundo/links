@@ -1,6 +1,6 @@
 version: '3.6'
 volumes:
-  user-service-mysql-data:
+  aurora-mysql-data:
 services:
   aurora-db:
     image: mysql:5.7
@@ -10,7 +10,7 @@ services:
       - 3306:3306
     volumes:
       - type: 'volume'
-        source: user-service-mysql-data
+        source: aurora-mysql-data
         target: /var/lib/mysql
         volume:
           nocopy: true
