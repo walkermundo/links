@@ -2,7 +2,7 @@ version: '3.6'
 volumes:
   user-service-mysql-data:
 services:
-  user-service-db:
+  aurora-db:
     image: mysql:5.7
     env_file:
       mysql.env
