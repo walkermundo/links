@@ -1,0 +1,14 @@
+version: '3.6'
+volumes:
+  jenkins-data:
+services:
+  jenkins:
+    image: jenkins/jenkins
+    ports:
+      - 50000:50000
+      - 8080:8080
+    volumes:
+      - type: 'volume'
+        source: jenkins-data
+        target: /var/jenkins_home
+    restart: always

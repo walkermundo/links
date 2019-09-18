@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  user-service:
+    image: user-service
+    entrypoint: [dotnet, DAKCS.UserService.dll]
+    environment:
+      Environment: docker
+    #hostname: user-service
+    #domainname: user-service.dakcs.com
+    ports:
+      - 5001:5001
+    volumes:
+      - ./appsettings.json:/app/appsettings.json
+      - ./cert.pfx:/cert/tls.pfx
+    restart: always
