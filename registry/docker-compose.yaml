@@ -21,4 +21,7 @@ services:
         target: /var/lib/registry
         volume:
           nocopy: true
+      - type: 'bind'
+        source: ./config.yaml
+        target: /etc/docker/registry/config.yml
     restart: always
