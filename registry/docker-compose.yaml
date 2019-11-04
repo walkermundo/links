@@ -1,6 +1,10 @@
 version: '3.6'
 volumes:
   registry-data:
+networks:
+  dev:
+    external:
+      name: dev
 services:
   registry:
     image: registry:2
@@ -25,3 +29,7 @@ services:
         source: ./config.yaml
         target: /etc/docker/registry/config.yml
     restart: always
+    networks:
+      dev:
+        aliases:
+          - registry

@@ -1,6 +1,10 @@
 version: '3.6'
 volumes:
   aurora-mysql-data:
+networks:
+  dev:
+    external:
+      name: dev
 services:
   aurora-db:
     image: mysql:5.7
@@ -15,3 +19,7 @@ services:
         volume:
           nocopy: true
     restart: always
+    networks:
+      dev:
+        aliases:
+          - aurora-db
