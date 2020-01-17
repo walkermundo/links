@@ -13,7 +13,7 @@ services:
       REGISTRY_HTTP_TLS_CERTIFICATE: /certs/dakcs_wildcard_cert.pem
       REGISTRY_HTTP_TLS_KEY: /certs/dakcs_wildcard_key.pem
     ports:
-      - 443:443
+      - 1443:443
     volumes:
       - type: 'bind'
         source: /root/certs
