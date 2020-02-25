@@ -10,13 +10,13 @@ services:
     image: registry:2
     environment:
       REGISTRY_HTTP_ADDR: 0.0.0.0:443
-      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/dakcs_wildcard_cert.pem
-      REGISTRY_HTTP_TLS_KEY: /certs/dakcs_wildcard_key.pem
+      REGISTRY_HTTP_TLS_CERTIFICATE: /certs/wildcard.crt
+      REGISTRY_HTTP_TLS_KEY: /certs/wildcard.key
     ports:
       - 1443:443
     volumes:
       - type: 'bind'
-        source: /root/certs
+        source: /usr/local/certs
         target: /certs
         volume:
           nocopy: true
