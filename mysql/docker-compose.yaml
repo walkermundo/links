@@ -1,0 +1,27 @@
+version: '3'
+services:
+  dev:
+    image: "mysql:5.7"
+    command: > 
+      --max-allowed-packet=536870912
+      --sql-mode="ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
+      --collation-server=utf8mb4_unicode_520_ci
+      --character-set-server=utf8mb4
+      --lower-case-table-names=1
+      --default-time-zone=+00:00
+      --tls-version=TLSv1.2
+      --ssl-ca=dakcs-ca.crt
+      --ssl-cert=brent.dakcs.com.crt
+      --ssl-key=brent.dakcs.com.key
+    environment:
+      MYSQL_ROOT_PASSWORD: "mysql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - type: "bind"
+        source: ./data
+        target: /var/lib/mysql
+        volume:
+          nocopy: true
+    restart: always
+    
