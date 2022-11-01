@@ -1,6 +1,6 @@
 version: '3'
 services:
-  dev:
+  dbserver:
     image: "mysql:5.7"
     command: > 
       --max-allowed-packet=536870912
@@ -11,17 +11,14 @@ services:
       --default-time-zone=+00:00
       --tls-version=TLSv1.2
       --ssl-ca=dakcs-ca.crt
-      --ssl-cert=brent.dakcs.com.crt
-      --ssl-key=brent.dakcs.com.key
+      --ssl-cert=dev.crt
+      --ssl-key=dev.rsa
     environment:
-      MYSQL_ROOT_PASSWORD: "mysql"
+      MYSQL_ROOT_PASSWORD: "Sting!@#"
     ports:
-      - "3306:3306"
+      - "4406:3306"
     volumes:
       - type: "bind"
         source: ./data
         target: /var/lib/mysql
-        volume:
-          nocopy: true
     restart: always
-    
