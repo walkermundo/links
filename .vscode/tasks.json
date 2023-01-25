@@ -2,5 +2,38 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "tasks": []
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Start DBServer",
+            "command": "docker-compose up -d",
+            "options": {
+                "cwd": "${workspaceFolder}/dbserver"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Stop DBServer",
+            "command": "docker-compose down",
+            "options": {
+                "cwd": "${workspaceFolder}/dbserver"
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
+        }
+    ]
 }

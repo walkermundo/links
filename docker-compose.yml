@@ -13,12 +13,26 @@ services:
       --ssl-ca=dakcs-ca.crt
       --ssl-cert=dev.crt
       --ssl-key=dev.rsa
+    restart: always
+
+  registry:
+    image: registry:2
     environment:
-      MYSQL_ROOT_PASSWORD: "Sting!@#"
+      REGISTRY_HTTP_ADDR: 0.0.0.0:443
     ports:
-      - "4406:3306"
+      - 1443:443
     volumes:
-      - type: "bind"
-        source: ./data
-        target: /var/lib/mysql
+      - type: 'bind'
+        source: /usr/local/certs
+        target: /certs
+        volume:
+          nocopy: true
+      - type: 'volume'
+        source: registry-data
+        target: /var/lib/registry
+        volume:
+          nocopy: true
+      - type: 'bind'
+        source: ./registry-config.yaml
+        target: /etc/docker/registry/config.yml
     restart: always
