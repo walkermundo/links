@@ -1,0 +1,46 @@
+body
+{
+	background-color: #0C090A;
+	color: #FFFAFA;
+	font-family: sans-serif;
+}
+
+.column
+{
+	float: left;
+	width: 22%;
+	padding: 10px;
+}
+
+.items
+{
+	margin-bottom: .5em;
+}
+
+.item
+{
+	margin-left: 2em;
+	font-size: .9em;
+}
+
+a:link
+{
+  color: #3BB9FF;
+}
+
+a:visited
+{
+  color: #3BB9FF;
+}
+
+a:hover
+{
+  background-color: #7F5A58;
+  color: #FFFAFA;
+}
+
+a:active
+{
+  background-color: #7F5A58;
+  color: #FFFAFA;
+}

@@ -1,38 +1,23 @@
 version: '3'
-services:
-  dbserver:
-    image: "mysql:5.7"
-    command: > 
-      --max-allowed-packet=536870912
-      --sql-mode="ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"
-      --collation-server=utf8mb4_unicode_520_ci
-      --character-set-server=utf8mb4
-      --lower-case-table-names=1
-      --default-time-zone=+00:00
-      --tls-version=TLSv1.2
-      --ssl-ca=dakcs-ca.crt
-      --ssl-cert=dev.crt
-      --ssl-key=dev.rsa
-    restart: always
 
+services:
   registry:
     image: registry:2
-    environment:
-      REGISTRY_HTTP_ADDR: 0.0.0.0:443
-    ports:
-      - 1443:443
     volumes:
-      - type: 'bind'
-        source: /usr/local/certs
-        target: /certs
-        volume:
-          nocopy: true
-      - type: 'volume'
-        source: registry-data
-        target: /var/lib/registry
-        volume:
-          nocopy: true
       - type: 'bind'
         source: ./registry-config.yaml
         target: /etc/docker/registry/config.yml
+    restart: always
+
+  links:
+    image: nginx:latest
+    volumes:
+      - type: 'bind'
+        source: ./work-links
+        target: /usr/share/nginx/html
+        read_only: true
+      - type: 'bind'
+        source: "./nginx.conf"
+        target: "/etc/nginx/conf.d/default.conf"
+        read_only: true
     restart: always
