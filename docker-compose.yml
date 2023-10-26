@@ -7,7 +7,7 @@ services:
       - type: 'bind'
         source: ./registry-config.yaml
         target: /etc/docker/registry/config.yml
-    restart: always
+    restart: unless-stopped
 
   links:
     image: nginx:latest
@@ -20,4 +20,15 @@ services:
         source: "./nginx.conf"
         target: "/etc/nginx/conf.d/default.conf"
         read_only: true
-    restart: always
+    restart: unless-stopped
+
+  pihole:
+    image: pihole/pihole:latest
+    volumes:
+      - type: 'bind'
+        source: "./pihole/etc/pihole"
+        target: "/etc/pihole"
+      - type: 'bind'
+        source: "./pihole/etc/dnsmasq.d"
+        target: "/etc/dnsmasq.d"
+    restart: unless-stopped
