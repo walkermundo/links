@@ -14,33 +14,36 @@ body
 
 .items
 {
-	margin-bottom: .5em;
+	margin-bottom: 1em;
 }
 
 .item
 {
-	margin-left: 2em;
-	font-size: .9em;
+	margin-left: 1.5em;
 }
 
 a:link
 {
   color: #3BB9FF;
+  font-size: .9em;
 }
 
 a:visited
 {
   color: #3BB9FF;
+  font-size: .9em;
 }
 
 a:hover
 {
   background-color: #7F5A58;
   color: #FFFAFA;
+  font-size: .9em;
 }
 
 a:active
 {
   background-color: #7F5A58;
   color: #FFFAFA;
+  font-size: .9em;
 }
