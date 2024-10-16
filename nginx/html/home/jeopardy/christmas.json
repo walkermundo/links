@@ -1,0 +1,196 @@
+{
+	"categories": [
+		{
+			"name": "Elf",
+			"answers": [
+				{
+					"answer": "Buddy got his name from this.",
+					"question": "What is his diaper?",
+					"value": 100
+				},
+				{
+					"answer": "He's an angry elf.",
+					"question": "Who is Miles Finch?",
+					"value": 200
+				},
+				{
+					"answer": "All 4 elf food groups.",
+					"question": "What are Candy, Candy Cane, Candy Corn, and Syrup?",
+					"value": 300
+				},
+				{
+					"answer": "Buddy answers the phone with this line at his dad's office.",
+					"question": "What is \"Buddy the elf what is your favorite color\"?",
+					"value": 400
+				},
+				{
+					"answer": "Fake santa smells like this according to Buddy.",
+					"question": "What is beef and cheese?",
+					"value": 500
+				}
+			]
+		},
+		{
+			"name": "Carols",
+			"answers": [
+				{
+					"answer": "The gift given on the 10th day of Christmas by my true love.",
+					"question": "What are 10 lords a leaping?",
+					"value": 100
+				},
+				{
+					"answer": "This carol's character was created by the marketing department for a department store.",
+					"question": "What is Rudolph the Red Nosed Reindeer?",
+					"value": 200
+				},
+				{
+					"answer": "This carol is based of off Psalms 98.",
+					"question": "What is Joy to the World?",
+					"value": 300
+				},
+				{
+					"answer": "This very popular carol was composed in 1818 by Franz Xaver Gruber in Austria.",
+					"question": "What is Silent Night?",
+					"value": 400
+				},
+				{
+					"answer": "When it is begining to look a lot like Christmas this is prettiest site to see",
+					"question": "What is \"The holly that will be on your front door\"?",
+					"value": 500
+				}
+			]
+		},
+		{
+			"name": "Christmas Characters",
+			"answers": [
+				{
+					"answer": "This biological shortcoming made The Grinch mean.",
+					"question": "What is his heart is two sizes too small?",
+					"value": 100
+				},
+				{
+					"answer": "The antagonist in the Nutcracker.",
+					"question": "Who is the Mouse King?",
+					"value": 200
+				},
+				{
+					"answer": "The owner of the most pathetic Christmas Tree.",
+					"question": "Who is Charlie Brown?",
+					"value": 300
+				},
+				{
+					"answer": "In the movie \"Rudolph the Red Nosed Reindeer\" this reindeer helped Rudolph fly in the reindeer games.",
+					"question": "Who is Clarice?",
+					"value": 400
+				},
+				{
+					"answer": "This person was engaged to Ebenezer Scrooge.",
+					"question": "Who is Belle?",
+					"value": 500
+				}
+			]
+		},
+		{
+			"name": "New Testament",
+			"answers": [
+				{
+					"answer": "Christ's birth city.",
+					"question": "What is Bethlehem?",
+					"value": 100
+				},
+				{
+					"answer": "This group was visited by an angel and learned about Christ's birth.",
+					"question": "Who are the shepherds?",
+					"value": 200
+				},
+				{
+					"answer": "Treasures of the wise men.",
+					"question": "What are gold, frankincense and myrrh?",
+					"value": 300
+				},
+				{
+					"answer": "King of Judah during Christ's birth.",
+					"question": "Who is Herod?",
+					"value": 400
+				},
+				{
+					"answer": "The prophetess that met baby Jesus in Jerusalem.",
+					"question": "Who is Anna?",
+					"value": 500
+				}
+			]
+		},
+		{
+			"name": "Traditions",
+			"answers": [
+				{
+					"answer": "Generally these little lanterns are lit on Christmas Eve.",
+					"question": "What are luminarias",
+					"value": 100
+				},
+				{
+					"answer": "This flower has become a tradition to display during Chrismas.",
+					"question": "What is a poinsettia?",
+					"value": 200
+				},
+				{
+					"answer": "Candy Canes originated from this country.",
+					"question": "What is Germany?",
+					"value": 300
+				},
+				{
+					"answer": "This holiday plant is typically believed to add fertility and vitality, and can protect you from witches and demons.",
+					"question": "What is Mistletoe",
+					"value": 400
+				},
+				{
+					"answer": "Instead of looking forward for a visit from Santa, children in central Europe hope to NOT be visited by this character.",
+					"question": "Who is Krampus?",
+					"value": 500
+				}
+			]
+		},
+		{
+			"name": "Random",
+			"answers": [
+				{
+					"answer": "Name all of Santa's reindeer.",
+					"question": "Who are Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner, Biltzen, Rudolph",
+					"value": 100
+				},
+				{
+					"answer": "The first ghost to visit Ebenezer Scrooge.",
+					"question": "Who is Jacob Marley?",
+					"value": 200
+				},
+				{
+					"answer": "The first elf to introduce his/her self to Scott Calvin in the movie \"The Santa Clause\".",
+					"question": "Who is Bernard?",
+					"value": 300
+				},
+				{
+					"answer": "Eggnog originated in this country.",
+					"question": "What is England?",
+					"value": 400
+				},
+				{
+					"answer": "In \"Twas the Night Before Christmas\" this line follows \"Tore open the shutters and threw up the sash\".",
+					"question": "What is \"The moon on the breast of the new fallen snow\"?",
+					"value": 500
+				}
+			]
+		}
+	],
+	"final": {
+		"adults": {
+			"category": "Luke Chapter 2",
+			"answer": "The governor of Syria when the taxing was first implemented.",
+			"question": "Who is Cyrenius (Luke 2:2)?"
+		},
+		"kids": {
+			"category": "Reindeer",
+			"answer": "The two reindeer that are named after weather phenomenom.",
+			"question": "What are Donner and Blitzen?"
+		}
+	}
+}

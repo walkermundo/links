@@ -1,0 +1,15 @@
+
+a.Finance:link { color: ForestGreen; }
+a.Finance:visited { color: ForestGreen; }
+a.Finance:hover { background: ForestGreen; color: White; }
+a.Finance:active { color: ForestGreen; }
+
+a.Utilities:link { color: RoyalBlue; }
+a.Utilities:visited { color: RoyalBlue; }
+a.Utilities:hover { background: RoyalBlue; color: White; }
+a.Utilities:active { color: RoyalBlue; }
+
+a.Medical:link { color: Teal; }
+a.Medical:visited { color: Teal; }
+a.Medical:hover { background: Teal; color: White; }
+a.Medical:active { color: Teal; }
